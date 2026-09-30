@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#081229,#0b1d3a,#0e2d52);
+    overflow:hidden;
+}
+
+.background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,191,255,.20),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(37,99,235,.20),transparent 30%);
+    animation:bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove{
+    from{transform:scale(1);}
+    to{transform:scale(1.1);}
+}
+
+.login-container{
+    position:relative;
+    width:420px;
+    background:rgba(17,24,39,.85);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:40px;
+    color:#fff;
+    box-shadow:0 0 35px rgba(0,170,255,.25);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo i{
+    font-size:60px;
+    color:#38bdf8;
+}
+
+.logo h1{
+    margin-top:10px;
+    font-size:28px;
+}
+
+.logo p{
+    color:#9ca3af;
+    margin-top:8px;
+}
+
+.input-box{
+    position:relative;
+    margin:20px 0;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:15px;
+    color:#38bdf8;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px 45px;
+    border:none;
+    border-radius:10px;
+    background:#1f2937;
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    box-shadow:0 0 12px #38bdf8;
+}
+
+#togglePassword{
+    position:absolute;
+    right:15px;
+    top:15px;
+    cursor:pointer;
+    color:#38bdf8;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#1d4ed8;
+    box-shadow:0 0 20px #38bdf8;
+}
+
+.footer{
+    margin-top:25px;
+    text-align:center;
+    color:#9ca3af;
+    font-size:13px;
+}
+
+@media(max-width:500px){
+    .login-container{
+        width:90%;
+        padding:30px;
+    }
+}
